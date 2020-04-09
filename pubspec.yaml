@@ -1,6 +1,6 @@
 name: root_check
-description: Flutter Plugin for Root Check based on RootBeer.
-version: 0.0.1
+description: Flutter Plugin for Root Check based on RootBeer. It's only support android for now, iOS on progress to develop
+version: 0.0.1+2
 #author: Nafi Projo Kusumo
 homepage: https://github.com/projo27/root_check
 

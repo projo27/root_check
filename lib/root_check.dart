@@ -2,18 +2,23 @@ import 'dart:async';
 
 import 'package:flutter/services.dart';
 
+///RootCheck class
 class RootCheck {
-  static const MethodChannel _channel = const MethodChannel('pln.com/root_check');
+  static const MethodChannel _channel =
+      const MethodChannel('pln.com/root_check');
 
+  ///method to check if binary file exists or not
   static Future<bool> checkForBinary(String filename) async {
     try {
-      final bool result = await _channel.invokeMethod('checkForBinary', {"filename" : filename});
+      final bool result =
+          await _channel.invokeMethod('checkForBinary', {"filename": filename});
       return result;
     } catch (error) {
       return null;
     }
   }
 
+  ///method to check if busyboxbinary exists or not
   static Future<bool> get checkForBusyBoxBinary async {
     try {
       final bool result = await _channel.invokeMethod('checkForBusyBoxBinary');
@@ -23,6 +28,7 @@ class RootCheck {
     }
   }
 
+  ///check if it can load native library
   static Future<bool> get canLoadNativeLibrary async {
     try {
       final bool result = await _channel.invokeMethod('canLoadNativeLibrary');
@@ -87,6 +93,7 @@ class RootCheck {
     }
   }
 
+  ///Check if SU is exists
   static Future<bool> get checkSuExists async {
     try {
       final bool result = await _channel.invokeMethod('checkSuExists');
@@ -96,6 +103,7 @@ class RootCheck {
     }
   }
 
+  ///Check if rooted with busybox or not
   static Future<bool> get isRootedWithBusyBoxCheck async {
     try {
       final bool result =
@@ -106,6 +114,8 @@ class RootCheck {
     }
   }
 
+  ///Check if rooted, it might be false alarm, some vendor add busybox for default,
+  ///check method isRootedWithBusyBoxCheck
   static Future<bool> get isRooted async {
     try {
       final bool result = await _channel.invokeMethod('isRooted');
