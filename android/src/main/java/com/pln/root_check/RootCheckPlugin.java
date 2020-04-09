@@ -44,6 +44,8 @@ public class RootCheckPlugin implements FlutterPlugin, MethodCallHandler {
     @Override
     public void onMethodCall(MethodCall call, MethodChannel.Result result) {
         RootBeer rootBeer = new RootBeer(this.context);
+        rootBeer.setLogging(false);
+
 
         if (call.method.equals("checkForBinary")) {
             result.success(rootBeer.checkForBinary(call.argument("filename").toString()));

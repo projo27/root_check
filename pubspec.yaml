@@ -1,8 +1,8 @@
 name: root_check
-description: A new flutter plugin project.
+description: Flutter Plugin for Root Check based on RootBeer.
 version: 0.0.1
-author:
-homepage:
+#author: Nafi Projo Kusumo
+homepage: https://github.com/projo27/root_check
 
 environment:
   sdk: ">=2.1.0 <3.0.0"

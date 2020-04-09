@@ -3,11 +3,11 @@ import 'dart:async';
 import 'package:flutter/services.dart';
 
 class RootCheck {
-  static const MethodChannel _channel = const MethodChannel('root_check');
+  static const MethodChannel _channel = const MethodChannel('pln.com/root_check');
 
-  static Future<bool> get checkForBinary async {
+  static Future<bool> checkForBinary(String filename) async {
     try {
-      final bool result = await _channel.invokeMethod('checkForBinary');
+      final bool result = await _channel.invokeMethod('checkForBinary', {"filename" : filename});
       return result;
     } catch (error) {
       return null;
