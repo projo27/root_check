@@ -40,7 +40,8 @@ class RootCheck {
 
   static Future<bool?> get checkForDangerousProps async {
     try {
-      final bool? result = await _channel.invokeMethod('checkForDangerousProps');
+      final bool? result =
+          await _channel.invokeMethod('checkForDangerousProps');
       return result;
     } catch (error) {
       return null;
@@ -137,7 +138,8 @@ class RootCheck {
 
   static Future<bool?> get detectRootCloakingApps async {
     try {
-      final bool? result = await _channel.invokeMethod('detectRootCloakingApps');
+      final bool? result =
+          await _channel.invokeMethod('detectRootCloakingApps');
       return result;
     } catch (error) {
       return null;

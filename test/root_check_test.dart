@@ -1,6 +1,5 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:root_check/root_check.dart';
 
 void main() {
   const MethodChannel channel = MethodChannel('root_check');

@@ -1,11 +1,12 @@
 name: root_check
 description: Flutter Plugin for Root Check based on RootBeer. It's only support android for now, iOS on progress to develop
 version: 0.0.2+1
-#author: Nafi Projo Kusumo
+#authors: Nafi Projo Kusumo <projo27@gmail.com>
 homepage: https://github.com/projo27/root_check
 
 environment:
   sdk: '>=2.12.0 <3.0.0'
+  flutter: '>=2.0.6'
 
 dependencies:
   flutter:
@@ -25,8 +26,10 @@ flutter:
   # be modified. They are used by the tooling to maintain consistency when
   # adding or updating assets for this project.
   plugin:
-    androidPackage: com.pln.root_check
-    pluginClass: RootCheckPlugin
+    platforms: 
+      android: 
+        package: com.pln.root_check
+        pluginClass: RootCheckPlugin
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:
